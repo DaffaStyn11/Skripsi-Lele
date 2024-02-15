@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gambar1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/Home_img_1"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_button_back"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/id_title_penyortiran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Home_img_1"
+        android:layout_centerHorizontal="true"
+        android:text="Lakukan Pengujian"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/id_penjelasan_testing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_title_penyortiran"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Pengujian penyortiran ukuran bibit lele"/>
+
+    <TextView
+        android:id="@+id/id_sumber_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="32dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/id_penjelasan_testing"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Sumber Video"
+        android:layout_marginBottom="5dp"/>
+
+    <Spinner
+        android:id="@+id/sumber_video_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_sumber_video"
+        android:background="@drawable/bg_spinner"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="30dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/btn_ambil_video"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sumber_video_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:text="Ambil Video"
+        android:fontFamily="@font/poppinsregular"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_video_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="32dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/btn_ambil_video"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Belum Memilih Video"
+        android:layout_marginBottom="5dp"/>
+</RelativeLayout>
