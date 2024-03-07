@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DataTestingActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gambar1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/Home_img_1"/>
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_button_back"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_kembali3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Kembali ke"
+        android:textColor="@color/black"
+        android:textSize="7sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_back"
+        app:layout_constraintStart_toEndOf="@+id/img_back" />
+
+    <TextView
+        android:id="@+id/tv_kembali_menu3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Menu Utama"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/img_back"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kembali3" />
+
+    <TextView
+        android:id="@+id/id_title_penyortiran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Lakukan Pengujian"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/id_penjelasan_testing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_title_penyortiran"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppinsregular"
+        android:text="Pengujian penyortiran ukuran bibit lele"/>
+
+    <TextView
+        android:id="@+id/id_sumber_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="32dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/id_penjelasan_testing"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Sumber Video"
+        android:layout_marginBottom="5dp"/>
+
+    <Spinner
+        android:id="@+id/sumber_video_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_sumber_video"
+        android:background="@drawable/bg_spinner"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="30dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/btn_ambil_video"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sumber_video_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="Ambil Video"
+        android:fontFamily="@font/poppinsregular"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"/>
+    
+    <ImageView
+        android:id="@+id/id_dummy_picture"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/btn_ambil_video"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="35dp"
+        android:src="@drawable/dummy_picture"
+        android:scaleType="centerCrop"/>
+
+    <Button
+        android:id="@+id/btn_mulai_pengujian"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_dummy_picture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/white"
+        android:text="Mulai Pengujian"
+        android:fontFamily="@font/poppinsregular"/>
+</RelativeLayout>

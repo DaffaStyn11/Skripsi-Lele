@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Skripsi Lele"
 include(":app")
+include(":sdk")

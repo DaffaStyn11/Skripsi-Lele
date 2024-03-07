@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sumber_video_options">
+        <item>Galeri</item>
+        <item>Kamera</item>
+    </string-array>
+</resources>

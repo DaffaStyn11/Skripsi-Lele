@@ -1,0 +1,2 @@
+ninja: Entering directory `F:\Project\Android Project\SkripsiLele\sdk\.cxx\Debug\141k6gx3\arm64-v8a'
+ninja: no work to do.
