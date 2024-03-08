@@ -101,7 +101,7 @@ public class DataTestingActivity extends AppCompatActivity {
         btn_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent open = new Intent(DataTestingActivity.this, CameraActivity2.class);
+                Intent open = new Intent(DataTestingActivity.this, CameraActivity.class);
                 startActivity(open);
             }
         });

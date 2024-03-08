@@ -5,6 +5,15 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front.autofocus"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -20,7 +29,7 @@
         android:theme="@style/Theme.SkripsiLele"
         tools:targetApi="31">
         <activity
-            android:name=".CameraActivity2"
+            android:name=".CameraActivity"
             android:exported="false" />
         <activity
             android:name=".RiwayatActivity"

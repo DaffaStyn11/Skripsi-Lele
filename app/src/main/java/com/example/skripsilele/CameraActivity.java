@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
-
-import org.opencv.android.CameraActivity;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Core;
@@ -21,12 +19,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CameraActivity2 extends CameraActivity  {
+public class CameraActivity extends org.opencv.android.CameraActivity {
     CameraBridgeViewBase cameraView;
     Mat curr_grey, prev_gray, rgb, diff;
     List<MatOfPoint> cnts;
     boolean is_init;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,15 +41,15 @@ public class CameraActivity2 extends CameraActivity  {
                 prev_gray = new Mat();
                 rgb = new Mat();
                 diff = new Mat();
-                cnts = new ArrayList<>();
+                cnts = new ArrayList<MatOfPoint>();
             }
 
             @Override
             public void onCameraViewStopped() {
-                curr_grey.release();
+                /*curr_grey.release();
                 prev_gray.release();
                 rgb.release();
-                diff.release();
+                diff.release();*/
             }
 
             @Override
@@ -68,13 +65,13 @@ public class CameraActivity2 extends CameraActivity  {
 
                 Core.absdiff(curr_grey, prev_gray, diff);
                 Imgproc.threshold(diff, diff, 40, 255, Imgproc.THRESH_BINARY);
-                Imgproc.findContours(diff,cnts,new Mat(),Imgproc.RETR_TREE,Imgproc.CHAIN_APPROX_SIMPLE);
+                Imgproc.findContours(diff, cnts, new Mat(), Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
 
-                Imgproc.drawContours(rgb,cnts,-1,new Scalar(255,0,0),4);
+                Imgproc.drawContours(rgb, cnts, -1, new Scalar(255, 0, 0), 4);
 
-                for (MatOfPoint m: cnts) {
+                for (MatOfPoint m : cnts) {
                     Rect r = Imgproc.boundingRect(m);
-                    Imgproc.rectangle(rgb,r,new Scalar(0,255,0),3);
+                    Imgproc.rectangle(rgb, r, new Scalar(0, 255, 0), 3);
                 }
 
                 cnts.clear();
